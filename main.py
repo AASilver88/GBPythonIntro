@@ -7,7 +7,15 @@
 # - 1 -> нет
 print ('Введите цифру от 1 до 7 обозначающую день недели: ')
 
-day = int(input())
+integer = False
+while not integer:
+    day = input()
+    if day.isdigit():
+        final = int(day)
+        integer = True
+
+
+day= int(day)
 
 if day > 5 and day<=7:
     print ("Выходной")
