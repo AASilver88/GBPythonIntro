@@ -9,20 +9,19 @@
 
 print ('Введите цифру от 1 до 7 обозначающую день недели: ')
 
-integer = False
-while not integer:
+while True:
     day = input()
-    if day.isdigit():
-        final = int(day)
-        integer = True
-
-print(integer)
-
-day= int(day)
-
-if day > 5 and day<=7:
-    print ("Выходной")
-elif day >=1 and day <=5:
-    print ("Будний")
-else:
-    print ("Введите корректное челое число от 1 до 7")
+    try:
+        day = float(day)
+    except ValueError:
+        print("Это не правильный ввод. Это не число вообще! Это строка, попробуйте еще раз.")
+    else:
+        def checkCoordinates(xy):
+            text = 4
+            if xy[0] > 0 and xy[1] > 0:
+                text = 1
+            elif xy[0] < 0 and xy[1] > 0:
+                text = 2
+            elif xy[0] < 0 and xy[1] < 0:
+                text = 3
+            print(f"Точка находится в {text} четверти плоскости")
