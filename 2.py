@@ -10,7 +10,11 @@
 print ('Введите цифру от 1 до 7 обозначающую день недели: ')
 
 while True:
-    day = input()
+    N = 2
+    day = [0]*N
+    for i in range (N):
+        print ("day[",i,"=", sep="", end="")
+        day[i] = input()
     try:
         day = float(day)
     except ValueError:
