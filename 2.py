@@ -16,7 +16,7 @@ while True:
         print ("day[",i,"=", sep="", end="")
         day[i] = input()
     try:
-        day = float(day)
+        day = [float(i) for i in day]
     except ValueError:
         print("Это не правильный ввод. Это не число вообще! Это строка, попробуйте еще раз.")
     else:
