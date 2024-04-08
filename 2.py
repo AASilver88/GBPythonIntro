@@ -9,23 +9,25 @@
 
 print ('Введите координаты точки (X и Y): ')
 
-while True:
-    N = 2
-    day = [0]*N
-    for i in range (N):
-        print ("day[",i,"=", sep="", end="")
-        day[i] = input()
-        try:
-            day = [float(i) for i in day]
-        except ValueError:
-            print("Это не правильный ввод. Это не число вообще! Это строка, попробуйте еще раз.")
 
-def checkCoordinates(xy):
+N = 2
+coord = [0]*N
+for i in range (N):
+    print ("координаты оси[",i,"=", sep="", end="")
+    coord[i] = input()
+    try:
+        coord = [float(i) for i in coord]
+    except ValueError:
+        print("Это не правильный ввод. Это не число вообще! Это строка, попробуйте еще раз.")
+
+def checkCoordinates(coord):
     text = 4
-    if xy[0] > 0 and xy[1] > 0:
+    if coord[0] > 0 and coord[1] > 0:
         text = 1
-    elif xy[0] < 0 and xy[1] > 0:
+    elif coord[0] < 0 and coord[1] > 0:
         text = 2
-    elif xy[0] < 0 and xy[1] < 0:
+    elif coord[0] < 0 and coord[1] < 0:
         text = 3
     print(f"Точка находится в {text} четверти плоскости")
+
+checkCoordinates(coord)
