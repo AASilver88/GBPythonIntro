@@ -5,7 +5,7 @@
 # - x=34; y=-30 -> 4
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
-
+import sys
 
 print ('Введите координаты точки (X и Y): ')
 
@@ -19,6 +19,7 @@ for i in range (N):
         coord = [float(i) for i in coord]
     except ValueError:
         print("Это не правильный ввод. Это не число вообще! Это строка, попробуйте еще раз.")
+        sys.exit()
 
 def checkCoordinates(coord):
     text = 4
